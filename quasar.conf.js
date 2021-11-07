@@ -12,7 +12,6 @@ const ESLintPlugin = require('eslint-webpack-plugin')
 const { configure } = require('quasar/wrappers')
 
 const API_LOCAL = 'http://192.168.0.220:3000'
-const API_PRODUCTION = 'https://garden-app2.herokuapp.com'
 
 module.exports = configure(function (ctx) {
   return {
@@ -51,7 +50,7 @@ module.exports = configure(function (ctx) {
     // Full list of options: https://v2.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
       env: {
-        API: API_PRODUCTION // API_LOCAL | API_PRODUCTION
+        API: API_LOCAL // API_LOCAL | API_PRODUCTION
       },
       vueRouterMode: 'hash', // available values: 'hash', 'history'
 
